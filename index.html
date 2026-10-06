@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadena de Ayuno de Daniel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Cadena de Ayuno de Daniel</h1>
+      <p>Inicio: 12 de Octubre | Selecciona tu día para unirte en oración</p>
+    </header>
+
+    <div class="calendar-grid" id="calendar">
+      <!-- Los días se generan dinámicamente -->
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="modalForm" class="modal hidden">
+      <div class="modal-content">
+        <h3>Anotarse</h3>
+        <p class="subtitle-modal">Día seleccionado: <strong id="selectedDateText"></strong></p>
+        
+        <form id="registroForm">
+          <label for="nombre">Nombre y Apellido:</label>
+          <input type="text" id="nombre" required placeholder="Ej. Juan Pérez" autocomplete="off">
+
+          <label for="modalidad">¿Cuántos días ayunarás desde esta fecha?:</label>
+<select id="modalidad">
+  <!-- Se llena automáticamente con los días disponibles -->
+</select>
+
+          <div class="actions">
+            <button type="button" class="btn-cancel" onclick="cerrarModal()">Cancelar</button>
+            <button type="submit" class="btn-confirm">Confirmar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
